@@ -1,0 +1,46 @@
+﻿<div class="modal fade" role="dialog" id="appointmentInput" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="appointmentForm" autocomplete="off" novalidate="novalidate">
+                <div class="modal-header">
+                    <h4 class="modal-title">Toevoegen/wijzigen afspraak</h4>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="camperCaravan">Caravan of camper</label>
+                        <input type="text"
+                               maxlength="100"
+                               class="form-control"
+                               id="camperCaravan" />
+                    </div>           
+                    <div class="form-group">
+                        <label for="appointmentDate"> Datum Afspraak</label>
+                        <input class="form-control"
+                               id="appointmentDate" />
+                    </div>
+                    <input type="hidden" id="id" />
+                    <div class="modal-footer">
+                        <button type="button"
+                                id="btnClose"
+                                class="btn btn-secondary"
+                                onclick="onCloseModal();">
+                            Sluit
+                        </button>
+                        &nbsp;
+                        <button type="button"
+                                id="btnSubmit"
+                                class="btn btn-success"
+                                onclick="onSubmitForm();">
+                            Opslaan
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/script-custom-calendar.js"></script>
+}
